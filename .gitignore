@@ -3,3 +3,17 @@
 ################################################################################
 
 /.vs/PickaxeProtocl-Web
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code / VS
+.vscode/
+.vs/
