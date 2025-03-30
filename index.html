@@ -1,88 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pickaxe Protocol</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #3a2f22;
-      color: #fff;
-      font-family: 'Press Start 2P', cursive;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-image: url('assets/background.png');
-      background-size: cover;
-      background-position: center;
-    }
-    .floating {
-      position: fixed;
-      bottom: 0;
-      width: 150px;
-      height: 150px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: float 3s ease-in-out infinite;
-      opacity: 0.8;
-    }
-    #left-character {
-      left: 10px;
-      background-image: url('assets/character1.jpg');
-      animation-delay: 0s;
-    }
-    #right-character {
-      right: 10px;
-      background-image: url('assets/character2.jpg');
-      animation-delay: 1.5s;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .container {
-      padding: 20px;
-    }
-    .logo {
-      margin-top: 20px;
-      width: 150px;
-    }
-    .menu {
-      margin-top: 30px;
-    }
-    .menu a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      color: #fff;
-      background-color: #ffb703;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 12px;
-    }
-    .footer {
-      margin-top: 40px;
-      color: #aaa;
-      font-size: 12px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pickaxe Protocol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #3a2f22;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/background.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .menu {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+            .menu a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                background-color: rgba(255, 255, 255, 1.0);
+                border-radius: 12px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+                color: #000;
+                font-size: 6px;
+                line-height: 1.2;
+                text-align: center;
+            }
+
+                .menu a:hover {
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
+
+                .menu a img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                    margin-bottom: 3px;
+                }
+
+        .telegram {
+            background-color: #039BE5 !important;
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 12px;
+        }
+        .menu a.telegram {
+            background-color: #039BE5;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <div id="left-character" class="floating"></div>
-  <div id="right-character" class="floating"></div>
-  <div class="container">
-    <img src="assets/logo.jpg" alt="Pickaxe Protocol Logo" class="logo">
-    <h1>Pickaxe Protocol</h1>
-    <p>The Mining GameFi Revolution</p>
-    <div class="menu">
-      <a href="#" onclick="alert('Litepaper coming soon!')">Litepaper</a>
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-      <a href="https://t.me" target="_blank">Telegram</a>
+    <div class="container">
+        <h1>Pickaxe Protocol</h1>
+        <p>The Mining GameFi Revolution</p>
+
+        <div class="menu">
+            <a href="#" onclick="alert('Litepaper coming soon!')">
+                <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="Litepaper">
+                Light Paper
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.neocode.pickaxe" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png" alt="Google Play">
+            </a>
+
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter X">
+            </a>
+
+            <a href="https://t.me" target="_blank" class="menu-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                     alt="Telegram"
+                     style="width: 45px; height: 45px;">
+            </a>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Pickaxe Protocol. All rights reserved.
+        </div>
     </div>
-    <div class="footer">
-      &copy; 2025 Pickaxe Protocol. All rights reserved.
-    </div>
-  </div>
 </body>
 </html>
