@@ -11,7 +11,6 @@
             padding: 0;
             height: 100%;
         }
-
         body {
             display: flex;
             flex-direction: column;
@@ -22,20 +21,48 @@
             background-size: cover;
             background-position: center;
             height: 100vh;
+            margin: 0;
             background-repeat: no-repeat;
             font-family: 'Press Start 2P', cursive;
             color: #fff;
             text-align: center;
         }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1; /* 중앙으로 오게하는 핵심 요소 */
+        }
+
+        .button {
+            background-color: #6a3e1a;
+            color: #f8e3c4;
+            font-size: 32px;
+            font-family: Arial, sans-serif;
+            margin-top: 0;
+            border-radius: 15px;
+            box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 3px solid #4d2b12;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .googleplay-btn {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
 
         .menu {
+            margin-top: auto; /* 메뉴를 아래쪽으로 밀어줌 */
+            margin-bottom: 80px; /* footer 위쪽으로부터 적당한 간격 확보 */
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
-
             .menu a {
                 display: flex;
                 flex-direction: column;
@@ -43,7 +70,7 @@
                 justify-content: center;
                 width: 70px;
                 height: 70px;
-                background-color: #fff;
+                background-color: transparent;
                 border-radius: 12px;
                 text-decoration: none;
                 color: #000;
@@ -69,6 +96,11 @@
                     height: 45px;
                     margin-bottom: 0;
                 }
+                .menu a.twitter img {
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 0;
+                }
 
         .footer {
             position: fixed;
@@ -86,6 +118,7 @@
             font-size: 32px;
             font-family: Arial, sans-serif;
             padding: 20px 50px;
+
             border-radius: 15px;
             box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
             border: 3px solid #4d2b12;
@@ -104,28 +137,34 @@
     </style>
 </head>
 <body>
-    <div class="button">Litepaper</div>
-    <div class="menu">
-        <a href="#" class="litepaper" onclick="alert('Litepaper coming soon!')">
-            <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="LitePaper">
-            Lite Paper
-        </a>
-
+    <div class="button-container">
+        <div class="button">Litepaper</div>
         <a href="https://play.google.com/store/apps/details?id=com.neocode.pickaxe" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png" alt="Google Play">
+            <img alt="Get it on Google Play"
+                 src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                 style="width:200px; height:auto; cursor:pointer;" />
         </a>
+        </div>
+        <div class="menu">
+            <!-- <a href="#" class="litepaper" onclick="alert('Litepaper coming soon!')">
+                 <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="LitePaper">
+                 Lite Paper
+             </a> -->
+            <!--<a href="https://play.google.com/store/apps/details?id=com.neocode.pickaxe" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png" alt="Google Play">
+            </a>-->
 
-        <a href="https://twitter.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter X">
-        </a>
+            <a href="https://twitter.com" class="twitter" target="_blank">
+                <img src="assets/twitter.png" alt="Twitter X">
+            </a>
 
-        <a href="https://t.me" target="_blank" class="telegram">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-        </a>
-    </div>
+            <a href="https://t.me" target="_blank" class="telegram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+            </a>
+        </div>
 
-    <div class="footer">
-        &copy; 2025 Pickaxe Protocol. All rights reserved.
-    </div>
+        <div class="footer">
+            &copy; 2025 Pickaxe Protocol. All rights reserved.
+        </div>
 </body>
 </html>
