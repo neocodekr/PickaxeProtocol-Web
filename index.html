@@ -1,120 +1,107 @@
-<style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pickaxe Protocol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background-color: #3a2f22;
-        background-image: url('assets/background.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        font-family: 'Press Start 2P', cursive;
-        color: #fff;
-        text-align: center;
-    }
-
-    .container {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding-bottom: 60px; /* footer 높이만큼 여백 줌 */
-    }
-
-
-    .menu {
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-        .menu a {
+        body {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 1.0);
-            border-radius: 12px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            color: #000;
-            font-size: 6px;
-            line-height: 1.2;
+            align-items: center;
+            background-color: #3a2f22;
+            background-image: url('assets/background.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
             text-align: center;
         }
 
-            .menu a:hover {
-                background-color: rgba(255, 255, 255, 0.8);
-            }
+        .menu {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
 
-            .menu a img {
-                width: 30px;
-                height: 30px;
-                object-fit: contain;
-                margin-bottom: 3px;
-            }
-
-            .menu a.telegram {
+            .menu a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 70px;
+                height: 70px;
                 background-color: #fff;
-                color: white;
+                border-radius: 12px;
+                text-decoration: none;
+                color: #000;
+                transition: 0.3s;
             }
 
+                .menu a:hover {
+                    background-color: #ddd;
+                }
+
+                .menu a img {
+                    width: 30px;
+                    height: 30px;
+                    margin-bottom: 4px;
+                }
+                .menu a.litepaper {
+                    font-family: 'Press Start 2P', cursive;
+                    font-size: 6px;
+                    color: #000;
+                }
                 .menu a.telegram img {
                     width: 45px;
                     height: 45px;
                     margin-bottom: 0;
                 }
 
-    .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #3a2f22;
-        padding: 10px 0;
-        color: #aaa;
-        font-size: 12px;
-    }
-</style>
-
-<div class="container">
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3a2f22;
+            padding: 10px 0;
+            color: #aaa;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
     <div class="menu">
-        <a href="#" onclick="alert('Litepaper coming soon!')">
-            <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="Litepaper">
-            Light Paper
+        <a href="#" class="litepaper" onclick="alert('Litepaper coming soon!')">
+            <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="LitePaper">
+            Lite Paper
         </a>
 
         <a href="https://play.google.com/store/apps/details?id=com.neocode.pickaxe" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png" alt="Google Play">
-            Play
         </a>
 
         <a href="https://twitter.com" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter X">
-            X
         </a>
 
         <a href="https://t.me" target="_blank" class="telegram">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
         </a>
     </div>
-</div>
 
-<div class="footer">
-    &copy; 2025 Pickaxe Protocol. All rights reserved.
-</div>
-
+    <div class="footer">
+        &copy; 2025 Pickaxe Protocol. All rights reserved.
+    </div>
+</body>
+</html>
