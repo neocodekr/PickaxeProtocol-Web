@@ -6,22 +6,30 @@
     }
 
     body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         background-color: #3a2f22;
-        color: #fff;
-        font-family: 'Press Start 2P', cursive;
-        text-align: center;
         background-image: url('assets/background.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        font-family: 'Press Start 2P', cursive;
+        color: #fff;
+        text-align: center;
     }
 
     .container {
         flex: 1;
-        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 60px; /* footer 높이만큼 여백 줌 */
     }
+
 
     .menu {
         margin-top: 30px;
@@ -104,8 +112,9 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
         </a>
     </div>
-
-    <div class="footer">
-        &copy; 2025 Pickaxe Protocol. All rights reserved.
-    </div>
 </div>
+
+<div class="footer">
+    &copy; 2025 Pickaxe Protocol. All rights reserved.
+</div>
+
