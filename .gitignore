@@ -17,3 +17,4 @@ obj/
 # VS Code / VS
 .vscode/
 .vs/
+/.vs/slnx.sqlite
